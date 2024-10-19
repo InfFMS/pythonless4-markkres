@@ -6,8 +6,9 @@
 # который будет работать для любого введенного натурального числа.
 
 def f(n):
-    if len(n)==1:
-        return n
+    a=n%10
+    if len(str(n))==1:
+        return str(a)
     else:
-        return n[-1]+f(n[0:len(n)-1])
-print(f(input()))
+        return str(a)+f(int((n-a)/10))
+print(f(int(input())))

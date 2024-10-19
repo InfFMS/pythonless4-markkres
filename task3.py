@@ -22,6 +22,9 @@ def f(N):
     if N>=5:
         a+="V"
         N-=5
-    a+="I"*(N)
+    if N==4:
+        a+="IV"
+    else:
+        a+="I"*(N)
     print(a)
 print(f(int(input())))
