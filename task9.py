@@ -3,4 +3,12 @@
 # или слово NO в противном случае.
 # Операцией возведения в степень пользоваться нельзя!
 # Задача на рекурсию!
-
+def step(n):
+    if n==1:
+        return True
+    elif n%2==0:
+        return step(int(n/2))
+    elif n%2==1:
+        return False
+N=int(input())
+print(step(N))

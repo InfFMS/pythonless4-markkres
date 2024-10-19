@@ -8,4 +8,10 @@
 # 25 15
 # Вывод:
 # 5 3
+import math
 
+def f(n,d):
+    gcd=math.gcd(n,d)
+    return n//gcd, d//gcd
+a,b=map(int,input().split())
+print(f(a,b))
