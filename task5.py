@@ -5,5 +5,9 @@
 # Идея задачи реализовать алгоритм,
 # который будет работать для любого введенного натурального числа.
 
-n=input()
-for i in range(len(n)): print(n[-1-i],end='')
+def f(n):
+    if len(n)==1:
+        return n
+    else:
+        return n[-1]+f(n[0:len(n)-1])
+print(f(input()))
